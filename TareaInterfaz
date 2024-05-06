@@ -1,0 +1,125 @@
+package application; 
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+public class TareaInterfaz extends Application {
+	
+	@Override
+	public void start(Stage primaryStage){
+		
+		// creamos el AnchorPane 
+		AnchorPane anchorPane = new AnchorPane();
+		
+		// Creamos un ListView 
+		ListView<String> listView = new ListView<>();
+		
+		// creamos un TextFiel
+        TextField textField = new TextField();
+		
+        // agregamos el ListView y el TextField al AnchorPane
+        anchorPane.getChildren().addAll(listView, textField);
+        
+        // le ponemos posición al ListView y al TextField en el AnchorPane
+        AnchorPane.setTopAnchor(listView, 10.0);
+        AnchorPane.setRightAnchor(listView, 10.0);
+        AnchorPane.setBottomAnchor(listView, 60.0);
+        AnchorPane.setTopAnchor(textField, 350.0);
+        AnchorPane.setRightAnchor(textField, 10.0);
+        AnchorPane.setLeftAnchor(textField, 342.0);
+        AnchorPane.setBottomAnchor(textField, 10.0); 
+        
+        // creamos los Labels
+        Label lb1 = new Label("Nombre y Apellido");
+        Label lb2 = new Label("Nombre y Apellido");
+        Label lb3 = new Label("Nombre y Apellido");
+        Label lb4 = new Label("Nombre y Apellido");
+        Label lb5 = new Label("Nombre y Apellido");
+        Label lb6 = new Label("Nombre y Apellido");
+        Label lb7 = new Label("Nombre y Apellido");
+        Label lb8 = new Label("Nombre y Apellido");
+        Label lb9 = new Label("Nombre y Apellido");
+        Label lb10 = new Label("Nombre y Apellido");
+
+        // creamos ImageViews
+        ImageView im1 = new ImageView();
+        ImageView im2 = new ImageView();
+        ImageView im3 = new ImageView();
+        ImageView im4 = new ImageView();
+        ImageView im5 = new ImageView();
+        ImageView im6 = new ImageView();
+        ImageView im7 = new ImageView();
+        ImageView im8 = new ImageView();
+        ImageView im9 = new ImageView();
+        ImageView im10 = new ImageView();
+        
+        // agregamos los Labels e ImageViews al AnchorPane
+        anchorPane.getChildren().addAll(im1, lb1, im2, lb2, im3, lb3, im4, lb4, im5, lb5, im6, lb6, im7, lb7, im8, lb8, im9, lb9, im10, lb10);
+        
+        // le ponemos posición a los Labels en el AnchorPane
+        AnchorPane.setTopAnchor(lb1, 30.0); 
+        AnchorPane.setLeftAnchor(lb1, 150.0); 
+        AnchorPane.setTopAnchor(lb2, 70.0); 
+        AnchorPane.setLeftAnchor(lb2, 150.0);
+        AnchorPane.setTopAnchor(lb3, 105.0); 
+        AnchorPane.setLeftAnchor(lb3, 150.0); 
+        AnchorPane.setTopAnchor(lb4, 140.0); 
+        AnchorPane.setLeftAnchor(lb4, 150.0);
+        AnchorPane.setTopAnchor(lb5, 175.0); 
+        AnchorPane.setLeftAnchor(lb5, 150.0); 
+        AnchorPane.setTopAnchor(lb6, 210.0); 
+        AnchorPane.setLeftAnchor(lb6, 150.0);
+        AnchorPane.setTopAnchor(lb7, 245.0); 
+        AnchorPane.setLeftAnchor(lb7, 150.0); 
+        AnchorPane.setTopAnchor(lb8, 280.0); 
+        AnchorPane.setLeftAnchor(lb8, 150.0);
+        AnchorPane.setTopAnchor(lb9, 315.0); 
+        AnchorPane.setLeftAnchor(lb9, 150.0); 
+        AnchorPane.setTopAnchor(lb10, 350.0); 
+        AnchorPane.setLeftAnchor(lb10, 150.0);
+       
+     // le ponemos posición a los ImageViews en el AnchorPane
+        AnchorPane.setTopAnchor(im1, 30.0); 
+        AnchorPane.setLeftAnchor(im1, 50.0); 
+        AnchorPane.setTopAnchor(im2, 70.0); 
+        AnchorPane.setLeftAnchor(im2, 50.0);
+        AnchorPane.setTopAnchor(im3, 105.0); 
+        AnchorPane.setLeftAnchor(im3, 50.0); 
+        AnchorPane.setTopAnchor(im4, 140.0); 
+        AnchorPane.setLeftAnchor(im4, 50.0);
+        AnchorPane.setTopAnchor(im5, 175.0); 
+        AnchorPane.setLeftAnchor(im5, 50.0); 
+        AnchorPane.setTopAnchor(im6, 210.0); 
+        AnchorPane.setLeftAnchor(im6, 50.0);
+        AnchorPane.setTopAnchor(im7, 245.0); 
+        AnchorPane.setLeftAnchor(im7, 50.0); 
+        AnchorPane.setTopAnchor(im8, 280.0); 
+        AnchorPane.setLeftAnchor(im8, 50.0);
+        AnchorPane.setTopAnchor(im9, 315.0); 
+        AnchorPane.setLeftAnchor(im9, 50.0); 
+        AnchorPane.setTopAnchor(im10, 350.0); 
+        AnchorPane.setLeftAnchor(im10, 50.0);
+        
+        // creamos la escena y la ubicamos en el escenario
+        Scene scene = new Scene(anchorPane, 600, 400);
+        primaryStage.setScene(scene);
+        
+        // establecemos un título a la ventana
+        primaryStage.setTitle("Interfaz que utiliza diseños");
+        
+        // mostramos la ventana
+        primaryStage.show();
+	}
+	
+	public static void main(String[] args) {
+        launch(args);
+    }
+	
+}

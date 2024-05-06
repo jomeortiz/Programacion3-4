@@ -1,6 +1,8 @@
 # Programacion en ambientes graficos con acceso a datos 3-3
 Tarea numero 1: Interfaz con diseño 
 
+# Alumno: Jose Medina Ortiz 
+
 El codigo fue realizado pormediode la aplicacion "Eclipse Workspace". En el proyecto podemos observar la utilizacion de layouts por medio de la herramiente JavaFX, en donde se pudo crear una interfaz grafica con un diseño estandar que puede ser utilizado en multiples proyectos, incluso con utilizacion distinta. 
 
 Si bien en el codigo observamos los ImageViewer pero en el print no, es debido a que el codigo te pide una direccion de directorio de la imagen especifica, la cual se intento ubicar sin obtener resultados positivos, sin embargo el codigo esta hecho en su totalidad paso a paso guiandonos por el codigo de ejemplo en la plataforma Moodle. 

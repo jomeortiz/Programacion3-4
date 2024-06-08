@@ -1,0 +1,92 @@
+package application;
+	
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+    	
+        //		creacion de controles
+        Button button = new Button("Button");
+        CheckBox checkBox = new CheckBox("CheckBox");
+        Hyperlink hyperlink = new Hyperlink("Hyoerlink");
+        ToggleButton toggleButton = new ToggleButton("ToggleButton");
+        RadioButton radioButton = new RadioButton("RadioButton");
+        Label label = new Label("Label");
+        TextField textField = new TextField("some text...");
+        PasswordField passwordField = new PasswordField();
+        TextArea textArea = new TextArea("This is very long text that will wrap to several lines.");
+        ProgressIndicator progressIndicator = new ProgressIndicator(0.49);
+        ProgressBar progressBar = new ProgressBar(0.49);
+        Slider slider = new Slider();
+
+        //		creacion de etiquetas de cada control
+        Label buttonLabel = new Label("Button:");
+        Label checkBoxLabel = new Label("CheckBox:");
+        Label hyperlinkLabel = new Label("Hyperlink:");
+        Label toggleButtonLabel = new Label("ToggleButton:");
+        Label radioButtonLabel = new Label("RadioButton:");
+        Label labelLabel = new Label("Label:");
+        Label textFieldLabel = new Label("TextField:");
+        Label passwordFieldLabel = new Label("PasswordField:");
+        Label textAreaLabel = new Label("TextArea:");
+        Label progressIndicatorLabel = new Label("ProgressIndicator:");
+        Label progressBarLabel = new Label("ProgressBar:");
+        Label sliderLabel = new Label("Slider:");
+
+        //		organizacion de los controles
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(10);
+        gridPane.setVgap(10);
+
+        gridPane.add(buttonLabel, 2, 0);
+        gridPane.add(button, 5, 0);
+
+        gridPane.add(checkBoxLabel, 2, 1);
+        gridPane.add(checkBox, 5, 1);
+
+        gridPane.add(hyperlinkLabel, 2, 2);
+        gridPane.add(hyperlink, 5, 2);
+
+        gridPane.add(toggleButtonLabel, 2, 3);
+        gridPane.add(toggleButton, 5, 3);
+
+        gridPane.add(radioButtonLabel, 2, 4);
+        gridPane.add(radioButton, 5, 4);
+
+        gridPane.add(labelLabel, 2, 5);
+        gridPane.add(label, 5, 5);
+
+        gridPane.add(textFieldLabel, 2, 6);
+        gridPane.add(textField, 5, 6);
+
+        gridPane.add(passwordFieldLabel, 2, 7);
+        gridPane.add(passwordField, 5, 7);
+
+        gridPane.add(textAreaLabel, 2, 8);
+        gridPane.add(textArea, 5, 8);
+
+        gridPane.add(progressIndicatorLabel, 2, 9);
+        gridPane.add(progressIndicator, 5, 9);
+
+        gridPane.add(progressBarLabel, 2, 10);
+        gridPane.add(progressBar, 5, 10);
+
+        gridPane.add(sliderLabel, 2, 11);
+        gridPane.add(slider, 5, 11);
+
+        //		creacion e impresion de escena
+        Scene scene = new Scene(gridPane, 650, 600);
+        primaryStage.setTitle("todos los controles");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+}

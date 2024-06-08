@@ -1,0 +1,59 @@
+package application;
+	
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        
+        MenuBar menuBar = new MenuBar();
+        Menu menuFile = new Menu("Archivo");
+        Menu menuEdit = new Menu("Editar");
+        Menu menuHelp = new Menu("Ayuda");
+
+        MenuItem newItem = new MenuItem("Nuevo");
+        MenuItem openItem = new MenuItem("Abrir");
+        MenuItem saveItem = new MenuItem("Guardar");
+        MenuItem exitItem = new MenuItem("Salir");
+
+        menuFile.getItems().addAll(newItem, openItem, saveItem, new SeparatorMenuItem(), exitItem);
+
+        MenuItem cutItem = new MenuItem("Cortar");
+        MenuItem copyItem = new MenuItem("Copiar");
+        MenuItem pasteItem = new MenuItem("Pegar");
+
+        menuEdit.getItems().addAll(cutItem, copyItem, pasteItem);
+
+        MenuItem aboutItem = new MenuItem("Acerca de");
+
+        menuHelp.getItems().add(aboutItem);
+
+        menuBar.getMenus().addAll(menuFile, menuEdit, menuHelp);
+
+        newItem.setOnAction(e -> System.out.println("Nuevo archivo"));
+        openItem.setOnAction(e -> System.out.println("Abrir archivo"));
+        saveItem.setOnAction(e -> System.out.println("Guardar archivo"));
+        exitItem.setOnAction(e -> System.exit(0));
+        cutItem.setOnAction(e -> System.out.println("Cortar"));
+        copyItem.setOnAction(e -> System.out.println("Copiar"));
+        pasteItem.setOnAction(e -> System.out.println("Pegar"));
+        aboutItem.setOnAction(e -> System.out.println("Acerca de esta aplicación"));
+
+        BorderPane root = new BorderPane();
+        root.setTop(menuBar);
+
+        Scene scene = new Scene(root, 200, 300);
+        primaryStage.setTitle("Menú en JavaFX");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}

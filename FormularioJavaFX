@@ -28,6 +28,11 @@ public class Main extends Application {
         ProgressBar progressBar = new ProgressBar(0.49);
         Slider slider = new Slider();
 
+	textArea.setWrapText(true);
+        textArea.setPrefRowCount(5);  // Número de filas visibles por defecto
+        ScrollPane textAreaScrollPane = new ScrollPane(textArea);
+        textAreaScrollPane.setFitToWidth(true);
+
         //		creacion de etiquetas de cada control
         Label buttonLabel = new Label("Button:");
         Label checkBoxLabel = new Label("CheckBox:");
